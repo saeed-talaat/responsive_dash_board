@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/views/dash_board_view.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ResponsiveDashBoard());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class ResponsiveDashBoard extends StatelessWidget {
+  const ResponsiveDashBoard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: DashBoardView(),
     );
   }
 }
