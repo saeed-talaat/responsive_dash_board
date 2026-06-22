@@ -14,7 +14,7 @@ class AllExpensessActiveItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20 , vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 10 , vertical: 8),
       decoration: ShapeDecoration(
         color: const Color(0xFF4EB7F2),
         shape: RoundedRectangleBorder(
@@ -27,11 +27,11 @@ class AllExpensessActiveItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
            AllExpensessItemHeader(image: allExpensessItemModel.image, imageBackground: Colors.white.withValues(alpha: 0.10000000149011612), imageColor:Colors.white ,),
-          const SizedBox(height: 34,),
+          const SizedBox(height: 17,),
           Text(allExpensessItemModel.title,style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),),
-          const SizedBox(height: 8,),
+          const SizedBox(height: 4,),
           Text(allExpensessItemModel.date,style: AppStyles.styleRegular14().copyWith(color: Colors.white),),
-          const SizedBox(height: 16,),
+          const SizedBox(height: 8,),
            Text(allExpensessItemModel.price,style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),),
         ],
       ),
