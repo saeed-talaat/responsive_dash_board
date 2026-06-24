@@ -39,41 +39,51 @@ class _DisplayAllExpensessItemState extends State<DisplayAllExpensessItem> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: AllExpensessItem(
-                  allExpensessItemModel: e.value,
-                  isSelected: selectedIndex == index,
-                ),
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 0;
+              });
+            },
+            child: AllExpensessItem(
+              allExpensessItemModel: items[0],
+              isSelected: selectedIndex == 0,
             ),
-          );
-        } else {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              child: AllExpensessItem(
-                allExpensessItemModel: e.value,
-                isSelected: selectedIndex == index,
-              ),
+          ),
+        ),
+        SizedBox(width: 8,),
+         Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 1;
+              });
+            },
+            child: AllExpensessItem(
+              allExpensessItemModel: items[1],
+              isSelected: selectedIndex == 1,
             ),
-          );
-        }
-      }).toList(),
+          ),
+        ),
+        SizedBox(width: 8,),
+         Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+            child: AllExpensessItem(
+              allExpensessItemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+        
+      ],
     );
+    
   }
 }

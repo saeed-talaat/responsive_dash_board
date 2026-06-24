@@ -28,11 +28,17 @@ class AllExpensessNotActiveItem extends StatelessWidget {
         children: [
            AllExpensessItemHeader(image: allExpensessItemModel.image,),
           const SizedBox(height: 17,),
-          Text(allExpensessItemModel.title,style: AppStyles.styleSemiBold16(context),),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(allExpensessItemModel.title,style: AppStyles.styleSemiBold16(context),)),
           const SizedBox(height: 4,),
-          Text(allExpensessItemModel.date,style: AppStyles.styleRegular14(),),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(allExpensessItemModel.date,style: AppStyles.styleRegular14(context),)),
           const SizedBox(height: 8,),
-           Text(allExpensessItemModel.price,style: AppStyles.styleSemiBold24(context),),
+           FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(allExpensessItemModel.price,style: AppStyles.styleSemiBold24(context),)),
         ],
       ),
     );

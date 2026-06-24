@@ -4,12 +4,12 @@ import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class MyCard extends StatelessWidget {
-  const MyCard({super.key});
+  const MyCard({super.key, });
   
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 420 / 215,
+      aspectRatio:  420 / 215,
       child: Container(
         decoration: ShapeDecoration(
           image: DecorationImage(
@@ -64,7 +64,7 @@ class MyCard extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 54 - 28),
+            Flexible(child: SizedBox(height: 54 - 28)),
           ],
         ),
       ),
